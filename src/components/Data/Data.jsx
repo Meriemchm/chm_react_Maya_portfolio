@@ -1,38 +1,37 @@
-import { FaGithub, FaLinkedin,FaJava  } from "react-icons/fa";
-import { BiLogoPython, BiLogoGit } from "react-icons/bi";
-import { SiTensorflow,SiKeras,SiPytorch   } from "react-icons/si";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import profile from "../../assets/profile.jpg";
 import { HiOutlineMail } from "react-icons/hi";
 
 export const Navlink = [
-    {
-      id: 1,
-      link: "home",
-    },
-    {
-      id: 2,
-      link: "story",
-    },
-    {
-      id: 7,
-      link: "routine",
-    },
-    {
-      id: 3,
-      link: "achievements",
-    },
-    {
-      id: 4,
-      link: "team",
-    },
-    {
-      id: 5,
-      link: "gallery",
-    },
-    {
-      id: 6,
-      link: "contact",
-    },
-  ];
+  {
+    id: 1,
+    link: "home",
+  },
+  {
+    id: 2,
+    link: "story",
+  },
+  {
+    id: 7,
+    link: "routine",
+  },
+  {
+    id: 3,
+    link: "achievements",
+  },
+  {
+    id: 4,
+    link: "team",
+  },
+  {
+    id: 5,
+    link: "gallery",
+  },
+  {
+    id: 6,
+    link: "contact",
+  },
+];
 
 export const links = [
   {
@@ -60,145 +59,52 @@ export const links = [
         <HiOutlineMail size={30} />
       </>
     ),
-    href: "mailto:ramzichibana31@gmail.com",
+    href: "",
   },
 ];
 
-export const techs = [
-    {
-      id: 1,
-      child: <BiLogoPython className="text-blue-900" size={50} />,
-      title: "Python",
-      style: "",
-      type: "Programming languages",
-    },
-    {
-      id: 2,
-      child: <img src="c.png"/>,
-      title: "C",
-      style: "",
-      type: "Programming languages",
-    },
-    {
-      id: 3,
-      child: <FaJava  className=" text-slate-500" size={50} />,
-      title: "Java",
-      style: "",
-      type: "Programming languages",
-    },
-    {
-      id: 4,
-      child: <SiTensorflow  color="orange" size={50} />,
-      title: "TensorFlow",
-      style: "",
-      type: "machine learning",
-    },
-    {
-      id: 5,
-      child: <SiKeras  color="red" size={50} />,
-      title: "keras",
-      style: "",
-      type: "machine learning",
-    },
-    {
-      id: 6,
-      child: <SiPytorch className="text-orange-500"  size={50} />,
-      title: "Pytorch",
-      style: "",
-      type: "machine learning",
-    },
-    {
-      id: 7,
-      child: <img src="sklearn.png"/>,
-      title: "sklearn",
-      style: "",
-      type: "machine learning",
-    },
-    {
-        id: 8,
-        child: <BiLogoGit color="black" size={50} />,
-        title: "Git & Github",
-        style: "",
-        type: "others",
-      },
-  ];
-
-export const services = [
+export const achievementsData = [
   {
     id: 1,
-    src: "icons8-intelligence-artificielle-64.png",
-    title: "Building machine learning models",
-    
+    src: "",
+    title: "",
     style: "bg-four",
-    textStyle : "text-second"
+    textStyle: "text-second",
   },
   {
     id: 2,
-    src: "icons8-analyse-de-la-croissance-financière-64.png",
-    title: "Data Analysis and Visualization",
-  style: "bg-primary",
-    textStyle : "text-second"
+    src: "",
+    title: "",
+    style: "bg-primary",
+    textStyle: "text-second",
   },
   {
     id: 3,
-    src: "icons8-data-processing-66.png",
-    title: "Data Preprocessing and Feature Engineering",
-   style: "bg-four",
-    textStyle : "text-second"
-  },
-  {
-    id: 4,
-    src: "icons8-test-réussi-50.png",
-    title: "Model Evaluation",
+    src: "",
+    title: "",
     style: "bg-four",
-    textStyle : "text-second"
+    textStyle: "text-second",
   },
 ];
 
-export const projects = [
-    {
-      id: 1,
-      src: "graph.png",
-      title: "AmazonGNNProductClassification",
-description:
-      "Project that utilizes Graph Neural Networks (GNNs) for the task of multi-class classification to predict the category of Amazon products.",
-      hcode: "https://github.com/RamzeyChibana/AmazonGNNProductClassification",
-      hdemo: "",
-      pdf: "",
-    },
-    {
-      id: 2,
-      src: "Rs.png",
-      title: "RecommanderSystems",
-    description: "This repository implements a Recommender System using both Collaborative Filtering and Content-Based approaches.",
-  
-      hcode: "https://github.com/RamzeyChibana/RecommanderSystems",
-      hdemo: "",
-      pdf: "",
-    },
-  
-    {
-      id: 3,
-      src: "Fire.png",
-      title: "FireDetection",
-   description:
-      "we Trained our model from scratch using TensorFlow Framework.",
-  
-      hcode: "https://github.com/RamzeyChibana/FireDetection",
-      hdemo: "",
-      pdf: "",
-    },
-    {
-      id: 4,
-      src: "ASL.png",
-      title: "American-sign-language-recognition",
-    description: "we try to recognize American Sign Language (ASL) using yolo v2 with tensorflow and keras.",
-  
-      hcode: "https://github.com/RamzeyChibana/American-sign-language-recognition",
-      hdemo: "",
-      pdf: "",
-    },
-  ];
+export const media = [
+  { type: "image", src: profile },
+  { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4" },
+  { type: "image", src: profile },
+  { type: "video", src: "https://www.w3schools.com/html/movie.mp4" },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+  { type: "image", src: profile },
+];
 
 export const formItem = [
   {
@@ -233,7 +139,6 @@ export const formItem = [
   },
 ];
 
-
 export const copyrightlink = [
   {
     id: 1,
@@ -252,5 +157,5 @@ export const copyrightlink = [
       </>
     ),
     href: "https://github.com/Meriemchm",
-  },]
-
+  },
+];

@@ -2,10 +2,11 @@ import React from "react";
 import NavBar from "../NavBar/NavBar";
 import Presentation from "../Presentation/Presentation";
 import Story from "../Story/Story" ;
-import Skills from "../Skills/Skills";
-import Services from "../Services/Services";
-import Projects from "../Projects/Projects";
+import Achievements from "../Achievements/Achievements";
 import Contact from "../Contact/Contact";
+import { Routine } from "../Routine/Routine";
+import { Team } from "../Team/Team";
+import { Gallery } from "../Gallery/Gallery";
 
 const Home = () => {
   return (
@@ -13,9 +14,10 @@ const Home = () => {
       <NavBar />
       <Presentation />
       <Story />
-      {/* <Skills />
-      <Services />
-      <Projects /> */}
+      <Routine />
+      <Achievements />
+      <Team/>
+      <Gallery/>
       <Contact /> 
 
     </div>

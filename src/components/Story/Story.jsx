@@ -7,22 +7,27 @@ import stars from "../../assets/stars.svg";
 const About = () => {
   return (
     <div name="story" className="bg-third w-full h-full">
-      <div className="max-w-screen-lg mx-auto p-10 flex flex-col  w-full h-full text-white">
+      <div className="max-w-screen-lg mx-auto p-4 md:p-10 flex flex-col  w-full h-full text-white">
         <div data-aos="fade-up" className="py-10">
           <TitleSections title="My story" />
         </div>
 
         <div className="flex flex-col gap-6">
+          {/* Image 1 */}
           <div
             data-aos="fade-up"
-            className="bg-gradient-to-r from-primaryPink via-sevenyellow to-[#FFE9CF] p-5 md:p-10 rounded-lg"
+            className="bg-gradient-to-r from-primaryPink via-sevenyellow to-[#FFE9CF] p-5 md:p-10 rounded-lg inline-block"
           >
-            <img src={profile} alt="profile" className="rounded-lg" />
+            <img
+              src={profile}
+              alt="profile"
+              className="rounded-lg w-full h-96 object-cover"
+            />
           </div>
 
-          <div className="flex flex-col md:flex-row bg-white rounded-xl shadow-md overflow-hidden mx-auto p-6 gap-6">
+          <div className="flex flex-col justify-center items-center md:flex-row bg-white rounded-xl border border-gray-200 overflow-hidden mx-auto p-6 gap-6">
             {/* Texte */}
-            <div className="flex-1 text-gray-800 space-y-4">
+            <div data-aos="fade-up" className="flex-1 text-gray-800 space-y-4 ">
               <p>
                 I’m 9 years old and I was born in 2015. I started ballet when I
                 was just 3 years old, and by 5, I found my true passion,{" "}
@@ -64,7 +69,10 @@ const About = () => {
             </div>
 
             {/* Image */}
-            <div className="flex-1 flex justify-center items-center">
+            <div
+              data-aos="fade-up"
+              className="flex-1 flex justify-center items-center"
+            >
               <img
                 src={profile2}
                 alt="Gymnast"
