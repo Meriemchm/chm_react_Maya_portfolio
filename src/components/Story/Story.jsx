@@ -14,14 +14,15 @@ const About = () => {
 
         <div className="flex flex-col gap-6">
           {/* Image 1 */}
+
           <div
             data-aos="fade-up"
-            className="bg-gradient-to-r from-primaryPink via-sevenyellow to-[#FFE9CF] p-5 md:p-10 rounded-lg inline-block"
+            className="bg-gradient-to-r from-primaryPink via-sevenyellow to-[#FFE9CF] p-5  md:p-10 rounded-lg"
           >
             <img
               src={profile}
               alt="profile"
-              className="rounded-lg w-full h-96 object-cover"
+              className="rounded-lg w-full h-96 object-cover hover:scale-105 duration-200"
             />
           </div>
 
@@ -71,12 +72,12 @@ const About = () => {
             {/* Image */}
             <div
               data-aos="fade-up"
-              className="flex-1 flex justify-center items-center"
+              className="flex-1 flex justify-center items-center "
             >
               <img
                 src={profile2}
                 alt="Gymnast"
-                className="rounded-lg object-cover w-full h-full max-h-80 md:max-h-full md:w-auto"
+                className="rounded-lg object-cover w-full h-full max-h-80 md:max-h-full md:w-auto hover:scale-105 duration-200"
               />
             </div>
           </div>

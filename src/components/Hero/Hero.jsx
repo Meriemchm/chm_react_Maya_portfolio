@@ -2,6 +2,7 @@ import React from "react";
 import { links } from "../Data/Data";
 import gymnastImage from "../../assets/image_nobg_4k.png";
 import Vector from "../../assets/vector.svg";
+import { Link } from "react-scroll";
 
 const Presentation = () => {
   return (
@@ -14,7 +15,7 @@ const Presentation = () => {
         />
 
         {/* Bloc texte */}
-        <div className="z-10 flex flex-col gap-6 px-4 md:px-10 py-10 md:text-left md:items-start max-w-xl">
+        <div data-aos="fade-left" className="z-10 flex flex-col gap-6 px-4 md:px-10 py-10 md:text-left md:items-start max-w-xl">
           {/* Icônes */}
           <div data-aos="fade-up" className="flex gap-4">
             {links.map(({ id, mobile, href, download }) => (
@@ -32,23 +33,28 @@ const Presentation = () => {
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold">
-            Hello, my name <br /> is Maya
+            Hello, my name <br /> is <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-300">Maya</span> 
           </h2>
           <p className="text-gray-700">Small gymnast. Big dreams</p>
 
           <div className="flex gap-4">
-            <button className="bg-black text-white px-2 md:px-4 py-2 rounded-md hover:scale-105 duration-200">
-              Contact me
-            </button>
-            <button className="border border-black px-2 md:px-4 py-2 rounded-md hover:scale-105 duration-200">
-              View my story
-            </button>
+            <Link to="contact" smooth={true} duration={500}>
+              <button className="bg-black text-white px-2 md:px-4 py-2 rounded-md hover:scale-105 duration-200">
+                Contact me
+              </button>
+            </Link>
+
+            <Link to="story" smooth={true} duration={500}>
+              <button className="border border-black px-2 md:px-4 py-2 rounded-md hover:scale-105 duration-200">
+                View my story
+              </button>
+            </Link>
           </div>
         </div>
 
         {/* Image gymnaste */}
         <img
-          data-aos="fade-up"
+          data-aos="fade-right"
           src={gymnastImage}
           alt="Gymnast"
           className="relative z-2 object-contain w-[50rem] h-[50rem]"

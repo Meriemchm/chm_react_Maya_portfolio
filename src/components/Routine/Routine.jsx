@@ -1,11 +1,7 @@
 import React from "react";
 import { TitleSections } from "../Utilities/TitleSections";
-
-const data = [
-  { id: 1, bgColor: "bg-purple-100" },
-  { id: 2, bgColor: "bg-yellow-100" },
-  { id: 3, bgColor: "bg-blue-100" },
-];
+import { routineData } from "../Data/Data";
+import testimage from "../../assets/profile2.jpg";
 
 export const Routine = () => {
   return (
@@ -25,13 +21,25 @@ export const Routine = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-          {data.map((item) => (
-            <div
-              data-aos="fade-up"
-              key={item.id}
-              className={`md:w-96 md:h-96 w-80 h-96 rounded-xl border border-gray-200 ${item.bgColor}`}
-            ></div>
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center ">
+          {routineData.map((item) => (
+            <div key={item.id} className="md:w-96 md:h-auto w-80 h-auto hover:scale-105 duration-200">
+              <div
+                data-aos="fade-up"
+                className=" rounded-xl border border-gray-200 flex flex-col justify-between overflow-hidden hover:scale-105 duration-200 "
+              >
+                <div className="h-72 w-full">
+                  <img
+                    src={testimage}
+                    alt={item.name}
+                    className="w-full h-full object-cover "
+                  />
+                </div>
+                <div className={` ${item.bgColor} py-3 text-center`}>
+                  <p className="text-[#5D3FD3] font-medium">{item.name}</p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

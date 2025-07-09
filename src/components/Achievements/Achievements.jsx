@@ -4,9 +4,23 @@ import { achievementsData } from "../Data/Data";
 import { TitleSections } from "../Utilities/TitleSections";
 const Achievements = () => {
   return (
-    <div name="achievements" className=" h-full w-full">
-      <div className="p-10 md:p-20 mx-auto flex flex-col  w-full h-full items-center justify-cente ">
+    <div name="achievements" className=" h-full w-full pt-10">
+      <div className="max-w-screen-lg mx-auto p-10 flex flex-col w-full h-full  ">
         <TitleSections title="Achievements" />
+
+        <div data-aos="fade-up" className="py-10">
+          <p className="text-black max-w-3xl">
+            I participated in{" "}
+            <span className="text-[#5D3FD3]">
+              two major international competitions
+            </span>{" "}
+            in Qatar with over 200 gymnasts from around the world. In 2025, I
+            traveled to Dubai to compete in a{" "}
+            <span className="text-secondPink">
+              big event organized by Strix Gymnastics Club
+            </span>
+          </p>
+        </div>
         <div data-aos="fade-up" className="">
           <Achievement data={achievementsData} />
         </div>

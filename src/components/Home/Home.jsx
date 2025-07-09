@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
-import Presentation from "../Presentation/Presentation";
+import Hero from "../Hero/Hero";
 import Story from "../Story/Story" ;
 import Achievements from "../Achievements/Achievements";
 import Contact from "../Contact/Contact";
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       <NavBar />
-      <Presentation />
+      <Hero />
       <Story />
       <Routine />
       <Achievements />

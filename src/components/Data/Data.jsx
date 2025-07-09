@@ -1,6 +1,8 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import profile from "../../assets/profile.jpg";
 import { HiOutlineMail } from "react-icons/hi";
+import reward from "../../assets/reward.svg"; 
+import reward2 from "../../assets/reward2.svg"; 
 
 export const Navlink = [
   {
@@ -63,27 +65,32 @@ export const links = [
   },
 ];
 
+export const routineData = [
+  { id: 1, bgColor: "bg-purpleSix", name: "HOOP" },
+  { id: 2, bgColor: "bg-sevenyellow", name: "BALL" },
+  { id: 3, bgColor: "bg-eightBlue", name: "RIBBON" },
+];
+
 export const achievementsData = [
   {
     id: 1,
-    src: "",
-    title: "",
-    style: "bg-four",
-    textStyle: "text-second",
+    src: reward2,
+    year: "2024",
+    description: (
+      <span>
+        <span className="font-bold text-[#5D3FD3]">3rd place</span> in solo routine at an international competition in <span className="font-bold">Georgia</span>.
+      </span>
+    ),
   },
   {
     id: 2,
-    src: "",
-    title: "",
-    style: "bg-primary",
-    textStyle: "text-second",
-  },
-  {
-    id: 3,
-    src: "",
-    title: "",
-    style: "bg-four",
-    textStyle: "text-second",
+    src: reward,
+    year: "2024",
+    description: (
+      <span>
+        <span className="font-bold text-[#5D3FD3]">1st place</span> in group routine at an international competition in <span className="font-bold">Georgia</span>.
+      </span>
+    ),
   },
 ];
 

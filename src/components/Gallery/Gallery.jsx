@@ -54,14 +54,14 @@ export const Gallery = () => {
                 key={index}
                 src={item.src}
                 alt={`media-${index}`}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-96 object-cover rounded-lg hover:scale-105 duration-200"
               />
             ) : (
               <video
                 key={index}
                 src={item.src}
                 controls
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto object-cover rounded-lg hover:scale-105 duration-200"
               />
             )
           )}
