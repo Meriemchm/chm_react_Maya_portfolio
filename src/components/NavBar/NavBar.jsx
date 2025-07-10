@@ -70,7 +70,7 @@ const Navbar = () => {
           </div>
 
           {Navlink.map(({ id, link }) => (
-            <li key={id}>
+            <li key={id} className="capitalize">
               <Link
                 to={link}
                 smooth

@@ -11,7 +11,7 @@ const Presentation = () => {
         <img
           src={Vector}
           alt="Decorative Vector"
-          className="absolute right-0 -top-12 bottom-0 md:h-full object-cover z-0"
+          className="absolute right-0 md:-top-40 -top-12 bottom-0 h-auto object-cover z-0"
         />
 
         {/* Bloc texte */}

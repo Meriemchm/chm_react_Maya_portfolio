@@ -4,9 +4,9 @@ import { routineData } from "../Data/Data";
 
 export const Routine = () => {
   return (
-    <div name="routine" className="bg-third w-full h-full">
+    <div name="routine" className="bg-third w-full h-full md:p-5 ">
       <div className="max-w-screen-lg mx-auto p-10 flex flex-col  w-full h-full text-white">
-        <div data-aos="fade-up" className="pt-10 text-left px-5 md:px-0">
+        <div data-aos="fade-up" className="pt-10 text-left px-20 md:px-0">
           <TitleSections title="My routine" />
         </div>
 
