@@ -10,7 +10,7 @@ import { Gallery } from "../Gallery/Gallery";
 
 const Home = () => {
   return (
-    <div className="overflow-hidden">
+    <div>
       <NavBar />
       <Hero />
       <Story />

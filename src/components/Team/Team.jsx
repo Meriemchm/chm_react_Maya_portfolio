@@ -6,7 +6,7 @@ import coachImage from "../../assets/coach.jpeg";
 export const Team = () => {
   return (
     <div name="team" className="w-full bg-white py-10">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-8">
         {/* Titre */}
         <div data-aos="fade-up" className="mb-10">
           <TitleSections title="My team" />
@@ -33,10 +33,10 @@ export const Team = () => {
 
           {/* Texte */}
           <div data-aos="fade-left" className="flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-2xl md:text-4xl font-bold">
               Hello, I am <br /> Maya’s coach
             </h2>
-            <p className="py-4 max-w-md">
+            <p className="py-4 max-w-md text-sm md:text-base">
               Maya is talented, flexible, and full of energy and passion. Always
               <span className="text-secondPink font-bold"> smiling</span>,{" "}
               <span className="text-violet-400 font-bold"> sweet</span>,{" "}
@@ -60,7 +60,7 @@ export const Team = () => {
                 className="absolute -top-8 -right-4 w-20 h-20 object-contain z-30"
               />
 
-              <div className="flex flex-col justify-start items-start gap-2">
+              <div className="flex flex-col justify-start items-start gap-2 text-sm md:text-base">
                 <p className="text-center z-20">
                   <span className="font-bold">Club name</span> : Olympic Stars{" "}
                 </p>

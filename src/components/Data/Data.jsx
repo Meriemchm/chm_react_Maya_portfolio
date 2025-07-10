@@ -41,7 +41,7 @@ export const links = [
     id: 1,
     mobile: (
       <>
-        <FaInstagram size={30} />
+        <FaInstagram size={35} />
       </>
     ),
     href: "https://www.instagram.com/maya_gymnastic_?igsh=ZjlwZWhsc29wMDhp&utm_source=qr",
@@ -50,7 +50,7 @@ export const links = [
     id: 2,
     mobile: (
       <>
-        <HiOutlineMail size={30} />
+        <HiOutlineMail size={35} />
       </>
     ),
     href: "mailto:Adel.Elomarabi@gmail.com",

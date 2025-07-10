@@ -24,7 +24,7 @@ export const Gallery = () => {
 
   return (
     <div ref={galleryRef} name="gallery" className="bg-third w-full h-full">
-      <div className="max-w-screen-lg mx-auto p-10 flex flex-col w-full h-full text-white">
+      <div className="max-w-screen-lg mx-auto p-8 flex flex-col w-full h-full text-white">
         {/* Titre */}
         <div data-aos="fade-up" className="pt-10 px-5 md:px-0">
           <TitleSections title="Gallery" />
@@ -32,7 +32,7 @@ export const Gallery = () => {
 
         {/* Texte d’intro */}
         <div data-aos="fade-up" className="py-10">
-          <p className="text-black max-w-xl">
+          <p className="text-black max-w-xl text-sm md:text-base">
             One day, I hope to compete at{" "}
             <span className="text-secondPink">the Olympics</span> and represent
             Sudan, and maybe even the United States. I want to become the best
@@ -54,7 +54,7 @@ export const Gallery = () => {
                 key={index}
                 src={item.src}
                 alt={`media-${index}`}
-                className="w-full h-96 object-cover rounded-lg hover:scale-105 duration-200"
+                className="w-full h-60 md:h-96 object-cover rounded-lg hover:scale-105 duration-200"
               />
             ) : (
               <video
@@ -69,7 +69,7 @@ export const Gallery = () => {
 
         {/* Bouton More / Less */}
         {visibleCount < media.length ? (
-          <div className="mt-8 flex justify-center">
+          <div className="mt-8 flex justify-center text-sm md:text-base">
             <button
               onClick={showMore}
               className="border border-black text-black px-6 py-2 rounded-lg hover:border-secondPink hover:text-secondPink transition"
@@ -78,10 +78,10 @@ export const Gallery = () => {
             </button>
           </div>
         ) : (
-          <div className="mt-8 flex justify-center">
+          <div className="mt-8 flex justify-center text-sm md:text-base">
             <button
               onClick={showLess} // 👈 appel à showLess
-              className="border border-black text-black px-6 py-2 rounded-lg hover:border-secondPink hover:text-secondPink transition"
+              className="border border-black text-black px-6 py-2 rounded-lg  hover:border-secondPink hover:text-secondPink transition"
             >
               Less
             </button>

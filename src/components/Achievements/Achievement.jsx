@@ -8,7 +8,7 @@ const Achievement = ({data}) => {
           {data.map(({ id, src, year, description }) => (
             <div
               key={id}
-              className={`bg-purpleSix flex flex-col items-center p-5 rounded-lg md:w-96 md:h-auto w-80 h-auto mx-auto hover:scale-105 duration-200 border border-gray-200`}
+              className={`bg-purpleSix flex flex-col items-center p-5 rounded-lg md:w-96 md:h-auto w-80 h-auto mx-auto hover:scale-105 duration-200 border border-gray-200 text-sm md:text-base`}
             >
               <div className="m-auto flex justify-center items-center">
                 <img className="self-center" src={src} alt="service" />

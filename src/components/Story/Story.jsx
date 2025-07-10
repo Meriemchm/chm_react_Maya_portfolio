@@ -1,6 +1,6 @@
 import React from "react";
 import { TitleSections } from "../Utilities/TitleSections";
-import profile from "../../assets/profile.jpg";
+import profile from "../../assets/profile_1.jpg";
 import profile2 from "../../assets/profile2.jpg";
 
 import stars from "../../assets/stars.svg";
@@ -17,18 +17,18 @@ const About = () => {
 
           <div
             data-aos="fade-up"
-            className="bg-gradient-to-r from-primaryPink via-sevenyellow to-[#FFE9CF] p-5  md:p-10 rounded-lg"
+            className="bg-gradient-to-r from-primaryPink via-sevenyellow to-[#FFE9CF] p-2  md:p-10 rounded-lg"
           >
             <img
               src={profile}
               alt="profile"
-              className="rounded-lg w-full h-96 object-cover hover:scale-105 duration-200"
+              className="rounded-lg md:w-full md:h-96  md:object-cover object-[10%_60%] hover:scale-105 duration-200"
             />
           </div>
 
           <div className="flex flex-col justify-center items-center md:flex-row bg-white rounded-xl border border-gray-200 overflow-hidden mx-auto p-6 gap-6">
             {/* Texte */}
-            <div data-aos="fade-up" className="flex-1 text-gray-800 space-y-4 ">
+            <div data-aos="fade-up" className="flex-1 text-gray-800 space-y-4 text-sm md:text-base ">
               <p>
                 I’m 9 years old and I was born in 2015. I started ballet when I
                 was just 3 years old, and by 5, I found my true passion,{" "}

@@ -1,13 +1,13 @@
 import React from "react";
 import { links } from "../Data/Data";
-import gymnastImage from "../../assets/image_nobg_4k.png";
+import gymnastImage from "../../assets/IMG-20250704-WA0033-no-bg.jpg";
 import Vector from "../../assets/vector.svg";
 import { Link } from "react-scroll";
 
 const Presentation = () => {
   return (
     <div name="home" className="flex min-h-screen w-full relative px-4 pt-28">
-      <div className="flex flex-col-reverse md:flex-row min-h-screen w-full bg-gradient-to-b from-purpleSix to-primaryPink rounded-lg justify-center items-center">
+      <div className="flex flex-col-reverse md:flex-row min-h-screen mx-auto w-full bg-gradient-to-b from-purpleSix to-primaryPink rounded-lg justify-center items-center">
         <img
           src={Vector}
           alt="Decorative Vector"
@@ -35,15 +35,15 @@ const Presentation = () => {
             ))}
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold">
+          <h2 className="text-3xl md:text-6xl font-bold">
             Hello, my name <br /> is{" "}
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-300">
               Maya
             </span>
           </h2>
-          <p className="text-gray-700">Small gymnast. Big dreams</p>
+          <p className="text-gray-700 text-sm md:text-base">Small gymnast. Big dreams</p>
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 text-sm md:text-base">
             <Link to="contact" smooth={true} duration={500}>
               <button className="bg-black text-white px-2 md:px-4 py-2 rounded-md hover:scale-105 duration-200">
                 Contact me
@@ -64,7 +64,7 @@ const Presentation = () => {
             data-aos="fade-right"
             src={gymnastImage}
             alt="Gymnast"
-            className="relative z-2 object-contain w-[40rem] h-[40rem]"
+            className="relative z-2 object-contain md:w-[35rem] md:h-[35rem] w-auto h-[20rem] rounded-full md:-top-20"
           />
         </div>
       </div>

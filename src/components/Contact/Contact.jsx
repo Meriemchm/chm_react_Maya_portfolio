@@ -10,20 +10,15 @@ const Contact = () => {
   const endElemnt = inputItem.slice(-1)[0];
 
   return (
-    <div name="contact" className="p-4 relative">
-      {/* Vecteur SVG à gauche */}
-      <div className="absolute left-0 bottom-0 z-20 pointer-events-none">
-        <img src={vector1} alt="" />
-      </div>
-
-      <div className="h-full py-20 bg-gradient-to-b from-sevenyellow via-primaryPink to-eightBlue rounded-lg">
-        <div data-aos="fade-up" className="">
+    <div name="contact" className="p-2 md:p-4 h-[125vh] w-full">
+      <div className=" relative py-16 bg-gradient-to-b from-sevenyellow via-primaryPink to-eightBlue rounded-lg h-full">
+        <div data-aos="fade-up">
           <p className="text-3xl md:text-4xl font-bold text-primary text-center py-8 ">
             Contact
           </p>
         </div>
 
-        <div className="flex flex-col 2xl:flex-row justify-center items-center md:w-full lg:px-0">
+        <div className="flex flex-col 2xl:flex-row justify-center items-center md:w-full">
           <div
             data-aos="fade-up"
             className="p-5 flex flex-col rounded-lg justify-center items-center"
@@ -74,13 +69,13 @@ const Contact = () => {
                 ></textarea>
               ))}
 
-              <button className="text-white bg-black px-6 py-3 my-8 self-end rounded-md hover:scale-110 duration-300">
+              <button className="text-white bg-black px-6 py-3 my-8 text-sm md:text-base self-end rounded-md hover:scale-110 duration-300">
                 Send
               </button>
             </form>
 
             {/* Icônes */}
-            <div data-aos="fade-up" className="flex gap-4">
+            <div className="flex gap-4 relative z-30">
               {links.map(({ id, mobile, href, download }) => (
                 <a
                   key={id}
@@ -95,6 +90,10 @@ const Contact = () => {
               ))}
             </div>
           </div>
+        </div>
+        {/* Vecteur SVG à gauche*/}
+        <div className="absolute left-0 bottom-0 z-20 pointer-events-none">
+          <img src={vector1} alt="vector" />
         </div>
       </div>
     </div>

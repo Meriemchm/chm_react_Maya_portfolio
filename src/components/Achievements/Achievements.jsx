@@ -5,11 +5,11 @@ import { TitleSections } from "../Utilities/TitleSections";
 const Achievements = () => {
   return (
     <div name="achievements" className=" h-full w-full pt-10">
-      <div className="max-w-screen-lg mx-auto p-10 flex flex-col w-full h-full  ">
+      <div className="max-w-screen-lg mx-auto p-8 flex flex-col w-full h-full  ">
         <TitleSections title="Achievements" />
 
         <div data-aos="fade-up" className="py-10">
-          <p className="text-black max-w-3xl">
+          <p className="text-black max-w-3xl text-sm md:text-base">
             I participated in{" "}
             <span className="text-[#5D3FD3]">
               two major international competitions

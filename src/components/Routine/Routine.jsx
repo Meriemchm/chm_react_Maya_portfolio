@@ -11,7 +11,7 @@ export const Routine = () => {
         </div>
 
         <div data-aos="fade-up" className="py-10">
-          <p className="text-black max-w-xl">
+          <p className="text-black max-w-xl text-sm md:text-base">
             I train about 3 hours a day,{" "}
             <span className="text-secondPink">4–5 days</span> a week, and almost
             every day when competitions are near. Training can be hard
