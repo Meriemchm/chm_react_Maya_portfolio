@@ -1,8 +1,9 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import profile from "../../assets/profile.jpg";
 import { HiOutlineMail } from "react-icons/hi";
-import reward from "../../assets/reward.svg"; 
-import reward2 from "../../assets/reward2.svg"; 
+import reward from "../../assets/reward.svg";
+import reward2 from "../../assets/reward2.svg";
+import hoopRoutine from "../../assets/Hoop.jpg";
 
 export const Navlink = [
   {
@@ -40,35 +41,26 @@ export const links = [
     id: 1,
     mobile: (
       <>
-        <FaLinkedin size={30} />
+        <FaInstagram size={30} />
       </>
     ),
-    href: "",
+    href: "https://www.instagram.com/maya_gymnastic_?igsh=ZjlwZWhsc29wMDhp&utm_source=qr",
   },
   {
     id: 2,
     mobile: (
       <>
-        <FaGithub size={30} />
-      </>
-    ),
-    href: "",
-  },
-  {
-    id: 3,
-    mobile: (
-      <>
         <HiOutlineMail size={30} />
       </>
     ),
-    href: "",
+    href: "mailto:Adel.Elomarabi@gmail.com",
   },
 ];
 
 export const routineData = [
-  { id: 1, bgColor: "bg-purpleSix", name: "HOOP" },
-  { id: 2, bgColor: "bg-sevenyellow", name: "BALL" },
-  { id: 3, bgColor: "bg-eightBlue", name: "RIBBON" },
+  { id: 1, bgColor: "bg-purpleSix", name: "HOOP", src: hoopRoutine },
+  { id: 2, bgColor: "bg-sevenyellow", name: "BALL", src: hoopRoutine },
+  { id: 3, bgColor: "bg-eightBlue", name: "RIBBON", src: hoopRoutine },
 ];
 
 export const achievementsData = [
@@ -78,7 +70,9 @@ export const achievementsData = [
     year: "2024",
     description: (
       <span>
-        <span className="font-bold text-[#5D3FD3]">3rd place</span> in solo routine at an international competition in <span className="font-bold">Georgia</span>.
+        <span className="font-bold text-[#5D3FD3]">3rd place</span> in solo
+        routine at an international competition in{" "}
+        <span className="font-bold">Georgia</span>.
       </span>
     ),
   },
@@ -88,7 +82,9 @@ export const achievementsData = [
     year: "2024",
     description: (
       <span>
-        <span className="font-bold text-[#5D3FD3]">1st place</span> in group routine at an international competition in <span className="font-bold">Georgia</span>.
+        <span className="font-bold text-[#5D3FD3]">1st place</span> in group
+        routine at an international competition in{" "}
+        <span className="font-bold">Georgia</span>.
       </span>
     ),
   },
@@ -143,26 +139,5 @@ export const formItem = [
     name: "message",
     placeholder: "Message",
     categorie: "textarea",
-  },
-];
-
-export const copyrightlink = [
-  {
-    id: 1,
-    mobile: (
-      <>
-        <FaLinkedin size={30} />
-      </>
-    ),
-    href: "https://www.linkedin.com/in/meriem-chami-361213283/",
-  },
-  {
-    id: 2,
-    mobile: (
-      <>
-        <FaGithub size={30} />
-      </>
-    ),
-    href: "https://github.com/Meriemchm",
   },
 ];

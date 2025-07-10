@@ -1,6 +1,7 @@
 import React from "react";
 import { formItem } from "../Data/Data";
 import vector1 from "../../assets/vector1.svg";
+import { links } from "../Data/Data";
 
 const Contact = () => {
   const client = "";
@@ -16,15 +17,17 @@ const Contact = () => {
       </div>
 
       <div className="h-full py-20 bg-gradient-to-b from-sevenyellow via-primaryPink to-eightBlue rounded-lg">
-
-        <div data-aos="fade-up" className="pb-8 md:px-20">
+        <div data-aos="fade-up" className="">
           <p className="text-3xl md:text-4xl font-bold text-primary text-center py-8 ">
             Contact
           </p>
         </div>
 
         <div className="flex flex-col 2xl:flex-row justify-center items-center md:w-full lg:px-0">
-          <div data-aos="fade-up" className="p-5 flex rounded-lg">
+          <div
+            data-aos="fade-up"
+            className="p-5 flex flex-col rounded-lg justify-center items-center"
+          >
             <form
               action={client}
               method="POST"
@@ -71,10 +74,26 @@ const Contact = () => {
                 ></textarea>
               ))}
 
-              <button className="text-white bg-black px-6 py-3 my-8 mx-auto flex place-items-end rounded-md hover:scale-110 duration-300">
-                Contact me
+              <button className="text-white bg-black px-6 py-3 my-8 self-end rounded-md hover:scale-110 duration-300">
+                Send
               </button>
             </form>
+
+            {/* Icônes */}
+            <div data-aos="fade-up" className="flex gap-4">
+              {links.map(({ id, mobile, href, download }) => (
+                <a
+                  key={id}
+                  href={href ? href : "/"}
+                  download={download}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-black hover:scale-105 duration-200"
+                >
+                  {mobile}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

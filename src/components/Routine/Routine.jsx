@@ -1,7 +1,6 @@
 import React from "react";
 import { TitleSections } from "../Utilities/TitleSections";
 import { routineData } from "../Data/Data";
-import testimage from "../../assets/profile2.jpg";
 
 export const Routine = () => {
   return (
@@ -30,7 +29,7 @@ export const Routine = () => {
               >
                 <div className="h-72 w-full">
                   <img
-                    src={testimage}
+                    src={item.src}
                     alt={item.name}
                     className="w-full h-full object-cover "
                   />
