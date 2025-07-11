@@ -1,9 +1,9 @@
 import { FaInstagram } from "react-icons/fa";
-import profile from "../../assets/profile.jpg";
+import profile from "../../assets/Images/profile.jpg";
 import { HiOutlineMail } from "react-icons/hi";
-import reward from "../../assets/reward.svg";
-import reward2 from "../../assets/reward2.svg";
-import hoopRoutine from "../../assets/Hoop.jpg";
+import reward from "../../assets/Icons/reward.svg";
+import reward2 from "../../assets/Icons/reward2.svg";
+import hoopRoutine from "../../assets/Images/Hoop.jpg";
 
 export const Navlink = [
   {
@@ -89,6 +89,21 @@ export const achievementsData = [
     ),
   },
 ];
+
+const imageImports = import.meta.glob("../../assets/Photos/*.{jpg,jpeg,png}", {
+  eager: true,
+  import: "default",
+});
+
+console.log("Images importées :", imageImports);
+
+export const mediaImages = Object.values(imageImports).map((img, index) => {
+  console.log(`image ${index + 1}:`, img); // affiche chaque image
+  return {
+    type: "image",
+    src: img,
+  };
+});
 
 export const media = [
   { type: "image", src: profile },

@@ -1,5 +1,5 @@
 import React from "react";
-import flower from "../../assets/flower.svg";
+import flower from "../../assets/Icons/flower.svg";
 
 export const TitleSections = ({ title }) => {
 

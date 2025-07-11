@@ -1,9 +1,9 @@
 import React from "react";
 import { TitleSections } from "../Utilities/TitleSections";
-import profile from "../../assets/profile_1.jpg";
-import profile2 from "../../assets/profile2.jpg";
+import profile from "../../assets/Images/profile_1.jpg";
+import profile2 from "../../assets/Images/profile2.jpg";
 
-import stars from "../../assets/stars.svg";
+import stars from "../../assets/Icons/stars.svg";
 const About = () => {
   return (
     <div name="story" className="bg-third w-full h-full">

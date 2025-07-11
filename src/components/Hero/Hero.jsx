@@ -1,7 +1,7 @@
 import React from "react";
 import { links } from "../Data/Data";
-import gymnastImage from "../../assets/IMG-20250704-WA0033-no-bg.jpg";
-import Vector from "../../assets/vector.svg";
+import gymnastImage from "../../assets/Images/IMG-20250704-WA0033-no-bg.jpg";
+import Vector from "../../assets/Icons/vector.svg";
 import { Link } from "react-scroll";
 
 const Presentation = () => {

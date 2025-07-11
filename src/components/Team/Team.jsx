@@ -1,7 +1,7 @@
 import React from "react";
-import logoClub from "../../assets/logo_club.png";
+import logoClub from "../../assets/Images/logo_club.png";
 import { TitleSections } from "../Utilities/TitleSections";
-import coachImage from "../../assets/coach.jpeg";
+import coachImage from "../../assets/Images/coach.jpeg";
 
 export const Team = () => {
   return (

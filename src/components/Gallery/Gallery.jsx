@@ -1,20 +1,21 @@
 import React, { useState, useRef } from "react";
 import Masonry from "react-masonry-css";
 import { TitleSections } from "../Utilities/TitleSections";
-import { media } from "../Data/Data";
+import { media,mediaImages } from "../Data/Data";
+import SmartVideo from "./SmartVideo";
 
 export const Gallery = () => {
   const [visibleCount, setVisibleCount] = useState(6);
-  const galleryRef = useRef(null); // 👈 référence du composant
+  const galleryRef = useRef(null); // référence du composant
 
   const showMore = () => setVisibleCount((prev) => prev + 6);
 
   const showLess = () => {
     setVisibleCount(6);
-    galleryRef.current?.scrollIntoView({ behavior: "smooth" }); // 👈 scroll vers le haut
+    galleryRef.current?.scrollIntoView({ behavior: "smooth" }); // scroll vers le haut
   };
 
-  const visibleMedia = media.slice(0, visibleCount);
+  const visibleMedia = mediaImages.slice(0, visibleCount);
 
   const breakpointColumnsObj = {
     default: 3,
@@ -54,21 +55,17 @@ export const Gallery = () => {
                 key={index}
                 src={item.src}
                 alt={`media-${index}`}
-                className="w-full h-60 md:h-96 object-cover rounded-lg hover:scale-105 duration-200"
-              />
-            ) : (
-              <video
-                key={index}
-                src={item.src}
-                controls
+                loading="lazy"
                 className="w-full h-auto object-cover rounded-lg hover:scale-105 duration-200"
               />
+            ) : (
+              <SmartVideo key={index} src={item.src} />
             )
           )}
         </Masonry>
 
         {/* Bouton More / Less */}
-        {visibleCount < media.length ? (
+        {visibleCount < mediaImages.length ? (
           <div className="mt-8 flex justify-center text-sm md:text-base">
             <button
               onClick={showMore}
@@ -80,7 +77,7 @@ export const Gallery = () => {
         ) : (
           <div className="mt-8 flex justify-center text-sm md:text-base">
             <button
-              onClick={showLess} // 👈 appel à showLess
+              onClick={showLess} 
               className="border border-black text-black px-6 py-2 rounded-lg  hover:border-secondPink hover:text-secondPink transition"
             >
               Less

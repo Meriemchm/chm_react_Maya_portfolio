@@ -1,6 +1,6 @@
 import React from "react";
 import { formItem } from "../Data/Data";
-import vector1 from "../../assets/vector1.svg";
+import vector1 from "../../assets/Icons/vector1.svg";
 import { links } from "../Data/Data";
 
 const Contact = () => {
