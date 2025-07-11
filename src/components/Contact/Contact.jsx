@@ -4,7 +4,7 @@ import vector1 from "../../assets/Icons/vector1.svg";
 import { links } from "../Data/Data";
 
 const Contact = () => {
-  const client = "";
+  const client = "https://getform.io/f/awnwdzyb";
   const inputItem = formItem.filter((item) => item.categorie === "input");
   const areaItem = formItem.filter((item) => item.categorie === "textarea");
   const endElemnt = inputItem.slice(-1)[0];

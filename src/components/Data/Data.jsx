@@ -90,20 +90,30 @@ export const achievementsData = [
   },
 ];
 
-const imageImports = import.meta.glob("../../assets/Photos/*.{jpg,jpeg,png}", {
-  eager: true,
-  import: "default",
-});
+// src/Data/Data.js
 
-console.log("Images importées :", imageImports);
+const imageModules = import.meta.glob("../../assets/Photos/*.{jpg,jpeg,png}");
 
-export const mediaImages = Object.values(imageImports).map((img, index) => {
-  console.log(`image ${index + 1}:`, img); // affiche chaque image
-  return {
-    type: "image",
-    src: img,
-  };
-});
+// Extraire les clés (chemins) et les fonctions d'import
+const imageEntries = Object.entries(imageModules);
+
+// On trie pour un ordre stable (par nom de fichier par ex)
+imageEntries.sort((a, b) => a[0].localeCompare(b[0]));
+
+export const loadImageByIndex = async (index) => {
+  if (index < imageEntries.length) {
+    const [path, importFn] = imageEntries[index];
+    const img = await importFn();
+    return {
+      type: "image",
+      src: img.default,
+    };
+  }
+  return null;
+};
+
+export const totalImages = imageEntries.length;
+
 
 export const media = [
   { type: "image", src: profile },

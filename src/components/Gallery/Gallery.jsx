@@ -1,21 +1,46 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Masonry from "react-masonry-css";
 import { TitleSections } from "../Utilities/TitleSections";
-import { media,mediaImages } from "../Data/Data";
-import SmartVideo from "./SmartVideo";
+import { loadImageByIndex, totalImages } from "../Data/Data";
 
 export const Gallery = () => {
-  const [visibleCount, setVisibleCount] = useState(6);
-  const galleryRef = useRef(null); // référence du composant
+  const [mediaImages, setMediaImages] = useState([]);
+  const [nextIndex, setNextIndex] = useState(0);
+  const galleryRef = useRef(null);
+  const batchSize = 6;
 
-  const showMore = () => setVisibleCount((prev) => prev + 6);
+  useEffect(() => {
+    loadMoreImages();
+  }, []);
 
-  const showLess = () => {
-    setVisibleCount(6);
-    galleryRef.current?.scrollIntoView({ behavior: "smooth" }); // scroll vers le haut
+  const loadMoreImages = async () => {
+    const newImages = [];
+
+    for (
+      let i = nextIndex;
+      i < Math.min(nextIndex + batchSize, totalImages);
+      i++
+    ) {
+      const img = await loadImageByIndex(i);
+      if (img) newImages.push(img);
+    }
+
+    // 🔐 Vérifie que chaque src est unique avant d'ajouter
+    setMediaImages((prev) => {
+      const existingSrcs = new Set(prev.map((item) => item.src));
+      const uniqueNewImages = newImages.filter((img) => !existingSrcs.has(img.src));
+      return [...prev, ...uniqueNewImages];
+    });
+
+    setNextIndex((prev) => prev + newImages.length);
   };
 
-  const visibleMedia = mediaImages.slice(0, visibleCount);
+  const showLess = () => {
+    const newImages = mediaImages.slice(0, batchSize);
+    setMediaImages(newImages);
+    setNextIndex(batchSize);
+    galleryRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const breakpointColumnsObj = {
     default: 3,
@@ -31,7 +56,7 @@ export const Gallery = () => {
           <TitleSections title="Gallery" />
         </div>
 
-        {/* Texte d’intro */}
+        {/* Texte */}
         <div data-aos="fade-up" className="py-10">
           <p className="text-black max-w-xl text-sm md:text-base">
             One day, I hope to compete at{" "}
@@ -42,33 +67,29 @@ export const Gallery = () => {
           </p>
         </div>
 
-        {/* Galerie Masonry */}
+        {/* Galerie */}
         <Masonry
           data-aos="fade-up"
           breakpointCols={breakpointColumnsObj}
           className="flex gap-6"
           columnClassName="space-y-6"
         >
-          {visibleMedia.map((item, index) =>
-            item.type === "image" ? (
-              <img
-                key={index}
-                src={item.src}
-                alt={`media-${index}`}
-                loading="lazy"
-                className="w-full h-auto object-cover rounded-lg hover:scale-105 duration-200"
-              />
-            ) : (
-              <SmartVideo key={index} src={item.src} />
-            )
-          )}
+          {mediaImages.map((item, index) => (
+            <img
+              key={item.src} // Utiliser src comme clé pour éviter duplication
+              src={item.src}
+              alt={`media-${index}`}
+              loading="lazy"
+              className="w-full h-auto object-cover rounded-lg hover:scale-105 duration-200"
+            />
+          ))}
         </Masonry>
 
-        {/* Bouton More / Less */}
-        {visibleCount < mediaImages.length ? (
+        {/* Boutons */}
+        {nextIndex < totalImages ? (
           <div className="mt-8 flex justify-center text-sm md:text-base">
             <button
-              onClick={showMore}
+              onClick={loadMoreImages}
               className="border border-black text-black px-6 py-2 rounded-lg hover:border-secondPink hover:text-secondPink transition"
             >
               More
@@ -77,8 +98,8 @@ export const Gallery = () => {
         ) : (
           <div className="mt-8 flex justify-center text-sm md:text-base">
             <button
-              onClick={showLess} 
-              className="border border-black text-black px-6 py-2 rounded-lg  hover:border-secondPink hover:text-secondPink transition"
+              onClick={showLess}
+              className="border border-black text-black px-6 py-2 rounded-lg hover:border-secondPink hover:text-secondPink transition"
             >
               Less
             </button>
