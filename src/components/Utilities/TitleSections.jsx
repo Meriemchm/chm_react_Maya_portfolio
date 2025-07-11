@@ -10,6 +10,7 @@ export const TitleSections = ({ title }) => {
       className={`flex flex-col ${
         isRoutine ? "items-start" : "items-center"
       } justify-center`}
+      data-aos="fade-up"
     >
       <div className={`flex items-center relative ${isRoutine ? "" : "justify-center"}`}>
         <img

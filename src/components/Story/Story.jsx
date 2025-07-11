@@ -6,11 +6,9 @@ import profile2 from "../../assets/Images/profile2.jpg";
 import stars from "../../assets/Icons/stars.svg";
 const About = () => {
   return (
-    <div name="story" className="bg-third w-full h-full">
-      <div className="max-w-screen-lg mx-auto p-4 md:p-10 flex flex-col  w-full h-full text-white">
-        <div data-aos="fade-up" className="py-10">
+    <div name="story" className="bg-third w-full h-full py-12">
+      <div className="max-w-screen-lg mx-auto p-4 md:p-10 flex flex-col gap-14 w-full h-full text-white">
           <TitleSections title="My story" />
-        </div>
 
         <div className="flex flex-col gap-6">
           {/* Image 1 */}

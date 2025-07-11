@@ -3,12 +3,10 @@ import GalleryContainer from "./GalleryContainer";
 
 export const Gallery = () => {
   return (
-    <div name="gallery" className="bg-third w-full h-full py-10">
+    <div name="gallery" className="bg-third w-full h-full py-12">
       <div className="max-w-screen-lg mx-auto p-8 flex flex-col w-full h-full text-white">
         {/* Titre */}
-        <div data-aos="fade-up" className=" px-5 md:px-0">
           <TitleSections title="Gallery" />
-        </div>
 
         {/* Texte */}
         <div data-aos="fade-up" className="py-10">

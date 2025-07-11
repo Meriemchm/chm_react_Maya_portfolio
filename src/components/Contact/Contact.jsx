@@ -13,7 +13,7 @@ const Contact = () => {
     <div name="contact" className="p-2 md:p-4 h-[125vh] w-full">
       <div className=" relative py-16 bg-gradient-to-b from-sevenyellow via-primaryPink to-eightBlue rounded-lg h-full">
         <div data-aos="fade-up">
-          <p className="text-3xl md:text-4xl font-bold text-primary text-center py-8 ">
+          <p className="text-3xl md:text-4xl font-bold text-primary text-center md:py-6 ">
             Contact
           </p>
         </div>
@@ -26,9 +26,9 @@ const Contact = () => {
             <form
               action={client}
               method="POST"
-              className="flex flex-col w-full justify-center mt-5 gap-4 relative z-30"
+              className="flex flex-col w-full justify-center gap-4 py-8 relative z-30"
             >
-              <p className="py-3 text-2xl md:text-4xl text-center">
+              <p className=" text-2xl md:text-4xl text-center">
                 Let's Collaborate !
               </p>
 

@@ -5,7 +5,7 @@ import coachImage from "../../assets/Images/coach.jpeg";
 
 export const Team = () => {
   return (
-    <div name="team" className="w-full bg-white py-10">
+    <div name="team" className="w-full bg-white py-12">
       <div className="max-w-6xl mx-auto px-8">
         {/* Titre */}
         <div data-aos="fade-up" className="mb-10">

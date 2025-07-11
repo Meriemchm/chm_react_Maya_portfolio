@@ -4,7 +4,7 @@ import { achievementsData } from "../Data/Data";
 import { TitleSections } from "../Utilities/TitleSections";
 const Achievements = () => {
   return (
-    <div name="achievements" className=" h-full w-full pt-10">
+    <div name="achievements" className=" h-full w-full py-12">
       <div className="max-w-screen-lg mx-auto p-8 flex flex-col w-full h-full  ">
         <TitleSections title="Achievements" />
 
