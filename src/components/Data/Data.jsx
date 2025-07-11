@@ -90,9 +90,11 @@ export const achievementsData = [
   },
 ];
 
+// Chargement dynamique des images
 const imageModules = import.meta.glob("../../assets/Photos/*.{jpg,jpeg,png}");
-const imageEntries = Object.entries(imageModules);
-imageEntries.sort((a, b) => a[0].localeCompare(b[0]));
+const imageEntries = Object.entries(imageModules).sort((a, b) =>
+  a[0].localeCompare(b[0])
+);
 
 export const loadImageByIndex = async (index) => {
   if (index < imageEntries.length) {
@@ -108,15 +110,42 @@ export const loadImageByIndex = async (index) => {
 
 export const totalImages = imageEntries.length;
 
-export const videoList = Object.values(
-  import.meta.glob("../../assets/Videos/*.mp4", {
-    eager: true,
-    import: "default",
-  })
-).map((src) => ({
-  type: "video",
-  src,
-}));
+// Chargement dynamique des vidéos (.mp4)
+const videoModules = import.meta.glob("../../assets/Video/*.mp4");
+const videoEntries = Object.entries(videoModules).sort((a, b) =>
+  a[0].localeCompare(b[0])
+);
+
+// Chargement dynamique des miniatures (.jpg avec même nom)
+const thumbnailModules = import.meta.glob("../../assets/Video/*.jpg", {
+  eager: true,
+  import: "default",
+});
+
+export const loadVideoByIndex = async (index) => {
+  if (index < videoEntries.length) {
+    const [path, importFn] = videoEntries[index];
+    const video = await importFn();
+
+    // le chemin de la miniature correspondante
+    const baseName = path.split("/").pop().replace(".mp4", ""); 
+
+    const thumbnailKey = Object.keys(thumbnailModules).find((key) =>
+      key.includes(`${baseName}.jpg`)
+    );
+
+    const thumbnail = thumbnailKey ? thumbnailModules[thumbnailKey] : null;
+
+    return {
+      type: "video",
+      src: video.default,
+      poster: thumbnail, 
+    };
+  }
+  return null;
+};
+
+export const totalVideos = videoEntries.length;
 
 export const formItem = [
   {

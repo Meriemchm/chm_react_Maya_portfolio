@@ -17,7 +17,7 @@ const About = () => {
 
           <div
             data-aos="fade-up"
-            className="bg-gradient-to-r from-primaryPink via-sevenyellow to-[#FFE9CF] p-2  md:p-10 rounded-lg"
+            className="bg-gradient-to-r from-primaryPink via-sevenyellow to-[#FFE9CF] p-4  md:p-10 rounded-lg"
           >
             <img
               src={profile}

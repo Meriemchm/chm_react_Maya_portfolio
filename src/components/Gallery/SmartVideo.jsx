@@ -1,16 +1,20 @@
 import React, { useRef } from "react";
 
-const SmartVideo = ({ src }) => {
+const SmartVideo = ({ src, poster }) => {
   const videoRef = useRef();
 
   return (
-    <video
-      ref={videoRef}
-      src={src}
-      controls
-      preload="metadata" // charge uniquement les métadonnées
-      className="w-full h-auto object-cover rounded-lg hover:scale-105 duration-200"
-    />
+    <div data-aos="fade-up">
+      {" "}
+      <video
+        ref={videoRef}
+        src={src}
+        controls
+        preload="metadata" // charge uniquement les métadonnées
+        poster={poster}
+        className="w-full h-96 object-cover rounded-lg hover:scale-105 duration-200"
+      />
+    </div>
   );
 };
 
