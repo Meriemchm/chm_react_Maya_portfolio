@@ -26,6 +26,7 @@ export const Team = () => {
               <img
                 src={coachImage}
                 alt="coach"
+                loading="lazy"
                 className="rounded-full w-72 h-72 md:w-80 md:h-80 object-cover"
               />
             </div>

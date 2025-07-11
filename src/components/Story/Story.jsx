@@ -22,6 +22,7 @@ const About = () => {
             <img
               src={profile}
               alt="profile"
+              loading="lazy"
               className="rounded-lg md:w-full md:h-96  md:object-cover object-[10%_60%] hover:scale-105 duration-200"
             />
           </div>
@@ -77,6 +78,7 @@ const About = () => {
               <img
                 src={profile2}
                 alt="Gymnast"
+                loading="lazy"
                 className="rounded-lg object-cover w-full h-full max-h-80 md:max-h-full md:w-auto hover:scale-105 duration-200"
               />
             </div>

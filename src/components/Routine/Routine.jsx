@@ -31,6 +31,7 @@ export const Routine = () => {
                   <img
                     src={item.src}
                     alt={item.name}
+                    loading="lazy"
                     className="w-full h-full object-cover "
                   />
                 </div>

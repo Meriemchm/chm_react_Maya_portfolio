@@ -50,7 +50,7 @@ export const links = [
     id: 2,
     mobile: (
       <>
-        <HiOutlineMail size={35} />
+        <HiOutlineMail size={38} />
       </>
     ),
     href: "mailto:Adel.Elomarabi@gmail.com",
@@ -90,14 +90,8 @@ export const achievementsData = [
   },
 ];
 
-// src/Data/Data.js
-
 const imageModules = import.meta.glob("../../assets/Photos/*.{jpg,jpeg,png}");
-
-// Extraire les clés (chemins) et les fonctions d'import
 const imageEntries = Object.entries(imageModules);
-
-// On trie pour un ordre stable (par nom de fichier par ex)
 imageEntries.sort((a, b) => a[0].localeCompare(b[0]));
 
 export const loadImageByIndex = async (index) => {
@@ -114,25 +108,15 @@ export const loadImageByIndex = async (index) => {
 
 export const totalImages = imageEntries.length;
 
-
-export const media = [
-  { type: "image", src: profile },
-  { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4" },
-  { type: "image", src: profile },
-  { type: "video", src: "https://www.w3schools.com/html/movie.mp4" },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-  { type: "image", src: profile },
-];
+export const videoList = Object.values(
+  import.meta.glob("../../assets/Videos/*.mp4", {
+    eager: true,
+    import: "default",
+  })
+).map((src) => ({
+  type: "video",
+  src,
+}));
 
 export const formItem = [
   {
