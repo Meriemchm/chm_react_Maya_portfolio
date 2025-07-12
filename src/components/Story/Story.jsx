@@ -40,7 +40,7 @@ const About = () => {
 
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <img src={stars} className="text-secondPink mt-1" />
+                  <img src={stars} alt="stars" className="text-secondPink mt-1" />
                   <span>
                     I’m not just a gymnast I’m also super{" "}
                     <span className="text-yellow-500">funny, goofy</span>, and I
@@ -48,7 +48,7 @@ const About = () => {
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <img src={stars} className="text-secondPink mt-1" />
+                  <img src={stars} alt="stars"  className="text-secondPink mt-1" />
                   <span>
                     I love, love, love giving gifts to the people I care about.
                     It makes me happy to make others smile.. I’m smart,
@@ -58,7 +58,7 @@ const About = () => {
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <img src={stars} className="text-secondPink mt-1" />
+                  <img src={stars} alt="stars"  className="text-secondPink mt-1" />
                   <span>
                     And most of all, I just love to have{" "}
                     <span className="text-secondPink">fun</span>, whether I’m on

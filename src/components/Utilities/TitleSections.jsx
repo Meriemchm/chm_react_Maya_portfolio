@@ -23,7 +23,7 @@ export const TitleSections = ({ title }) => {
             isRoutine ? "items-start" : "items-center"
           } justify-center`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-black">{title}</h2>
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-black">{title}</h2>
 
           {/*Cache la bordure si c'est "My routine" */}
           {!isRoutine && (

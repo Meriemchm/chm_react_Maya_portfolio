@@ -13,7 +13,7 @@ const Contact = () => {
     <div name="contact" className="p-2 md:p-4 h-[125vh] w-full">
       <div className=" relative py-16 bg-gradient-to-b from-sevenyellow via-primaryPink to-eightBlue rounded-lg h-full">
         <div data-aos="fade-up">
-          <p className="text-3xl md:text-4xl font-bold text-primary text-center md:py-6 ">
+          <p className="font-playfair text-3xl md:text-4xl font-bold text-primary text-center md:py-6 ">
             Contact
           </p>
         </div>
@@ -26,7 +26,7 @@ const Contact = () => {
             <form
               action={client}
               method="POST"
-              className="flex flex-col w-full justify-center gap-4 py-8 relative z-30"
+              className="flex flex-col w-full justify-center gap-4 pt-8 relative z-30"
             >
               <p className=" text-2xl md:text-4xl text-center">
                 Let's Collaborate !
@@ -75,7 +75,7 @@ const Contact = () => {
             </form>
 
             {/* Icônes */}
-            <div className="flex gap-4 relative z-30">
+            <div className="flex gap-4 relative z-30 justify-center items-center">
               {links.map(({ id, mobile, href, download }) => (
                 <a
                   key={id}

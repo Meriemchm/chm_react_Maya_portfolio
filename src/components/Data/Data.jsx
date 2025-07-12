@@ -1,6 +1,5 @@
-import { FaInstagram } from "react-icons/fa";
-import profile from "../../assets/Images/profile.jpg";
-import { HiOutlineMail } from "react-icons/hi";
+import insta from "../../assets/Icons/insta.svg";
+import mail from "../../assets/Icons/mail.svg";
 import reward from "../../assets/Icons/reward.svg";
 import reward2 from "../../assets/Icons/reward2.svg";
 import hoopRoutine from "../../assets/Images/Hoop.jpg";
@@ -41,7 +40,7 @@ export const links = [
     id: 1,
     mobile: (
       <>
-        <FaInstagram size={35} />
+        <img src={insta} alt="insta" />
       </>
     ),
     href: "https://www.instagram.com/maya_gymnastic_?igsh=ZjlwZWhsc29wMDhp&utm_source=qr",
@@ -50,7 +49,7 @@ export const links = [
     id: 2,
     mobile: (
       <>
-        <HiOutlineMail size={38} />
+        <img src={mail} alt="mail" />
       </>
     ),
     href: "mailto:Adel.Elomarabi@gmail.com",

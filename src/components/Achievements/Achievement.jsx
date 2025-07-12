@@ -11,7 +11,7 @@ const Achievement = ({data}) => {
               className={`bg-purpleSix flex flex-col items-center p-8 rounded-lg md:h-auto w-full h-auto mx-auto hover:scale-105 duration-200 border border-gray-200 text-sm md:text-base`}
             >
               <div className="m-auto flex justify-center items-center">
-                <img className="self-center" src={src} alt="service" />
+                <img className="self-center" src={src} alt="achievement" />
               </div>
 
               <p className="font-bold text-xl md:text-2xl">{year}</p>

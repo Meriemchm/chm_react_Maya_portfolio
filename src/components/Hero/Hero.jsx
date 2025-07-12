@@ -20,7 +20,7 @@ const Presentation = () => {
           className="z-10 flex flex-col gap-6 px-4 md:px-10 py-10 md:text-left md:items-start max-w-xl"
         >
           {/* Icônes */}
-          <div data-aos="fade-up" className="flex gap-4">
+          <div data-aos="fade-up" className="flex gap-4 justify-center items-center">
             {links.map(({ id, mobile, href, download }) => (
               <a
                 key={id}
@@ -35,7 +35,7 @@ const Presentation = () => {
             ))}
           </div>
 
-          <h2 className="text-3xl md:text-6xl font-bold">
+          <h2 className="font-playfair text-3xl md:text-6xl font-bold">
             Hello, my name <br /> is{" "}
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-300">
               Maya

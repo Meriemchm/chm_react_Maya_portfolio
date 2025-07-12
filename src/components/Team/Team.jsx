@@ -33,11 +33,12 @@ export const Team = () => {
           </div>
 
           {/* Texte */}
-          <div data-aos="fade-left" className="flex flex-col justify-center">
-            <h2 className="text-2xl md:text-4xl font-bold">
-              Hello, I am <br /> Maya’s coach
+          <div data-aos="fade-left" className="flex flex-col justify-center gap-6">
+            <h2 className="font-playfair text-2xl md:text-4xl font-bold">
+              Hello, I’m Ms. Melani
+              <br /> Maya’s coach
             </h2>
-            <p className="py-4 max-w-md text-sm md:text-base">
+            <p className="max-w-md text-sm md:text-base">
               Maya is talented, flexible, and full of energy and passion. Always
               <span className="text-secondPink font-bold"> smiling</span>,{" "}
               <span className="text-violet-400 font-bold"> sweet</span>,{" "}
