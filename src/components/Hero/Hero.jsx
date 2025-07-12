@@ -23,7 +23,7 @@ const Presentation = () => {
           {/* Icônes */}
           <div
             data-aos="fade-up"
-            className="flex gap-4 justify-center items-center"
+            className="flex gap-4 justify-start items-center"
           >
             {links.map(({ id, mobile, href, download }) => (
               <a
