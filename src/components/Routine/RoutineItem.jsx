@@ -1,6 +1,6 @@
 import React from "react";
 import { routineData } from "../Data/Data";
-import flourish from "../../assets/Icons/flourish.svg";
+import flourish from "../../assets/Icons/flourish.png";
 export const RoutineItem = () => {
   return (
     <div className="flex flex-col md:flex-row gap-4 justify-center items-center ">
@@ -28,7 +28,7 @@ export const RoutineItem = () => {
               <img
                 src={flourish}
                 alt="flourish"
-                className="absolute -top-5 left-1/2 transform -translate-x-1/2"
+                className="absolute top-0 left-1/2 transform -translate-x-1/2 h-12"
               />
 
               {/* Texte centré */}
