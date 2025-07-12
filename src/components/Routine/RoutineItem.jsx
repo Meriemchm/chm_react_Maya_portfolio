@@ -28,7 +28,7 @@ export const RoutineItem = () => {
               <img
                 src={flourish}
                 alt="flourish"
-                className="absolute top-0 left-1/2 transform -translate-x-1/2"
+                className="absolute -top-5 left-1/2 transform -translate-x-1/2"
               />
 
               {/* Texte centré */}
