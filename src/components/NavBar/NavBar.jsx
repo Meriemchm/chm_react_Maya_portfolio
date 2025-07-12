@@ -44,7 +44,7 @@ const Navbar = () => {
           {Navlink.map(({ id, link }) => (
             <li
               key={id}
-              className="cursor-pointer hover:text-secondPink transition duration-200"
+              className="cursor-pointer hover:text-secondPink hover:font-bold"
             >
               <Link to={link} smooth duration={500}>
                 {link}

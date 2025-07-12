@@ -8,7 +8,7 @@ const Achievements = () => {
       <div className="max-w-screen-lg mx-auto p-8 flex flex-col w-full h-full  ">
         <TitleSections title="Achievements" />
 
-        <div data-aos="fade-up" className="py-10">
+        <div data-aos="fade-up" className="py-14">
           <p className="text-black max-w-3xl text-sm md:text-base">
             I participated in{" "}
             <span className="text-[#5D3FD3]">

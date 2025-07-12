@@ -7,6 +7,7 @@ import {
 } from "../Data/Data";
 import Masonry from "react-masonry-css";
 import SmartVideo from "./SmartVideo";
+import PinkFlower from "../../assets/Icons/PinkFlower.svg";
 
 const GalleryContainer = ({ type }) => {
   const [mediaItems, setMediaItems] = useState([]);
@@ -87,12 +88,20 @@ const GalleryContainer = ({ type }) => {
           {loading ? (
             <p className="text-center text-black">Loading...</p>
           ) : nextIndex < total ? (
-            <button
-              onClick={loadMore}
-              className="border border-black text-black px-6 py-2 rounded-lg hover:border-secondPink hover:text-secondPink transition"
-            >
-              More
-            </button>
+            <div className="relative inline-block  hover:scale-105 duration-200">
+              {/* Fleur décorative en bas à droite */}
+              <img
+                src={PinkFlower}
+                alt="Fleur décorative"
+                className="absolute -bottom-4 -right-4 h-8 w-8"
+              />
+              <button
+                onClick={loadMore}
+                className="border border-black text-black px-6 py-2 rounded-lg hover:border-secondPink hover:text-secondPink transition"
+              >
+                More
+              </button>{" "}
+            </div>
           ) : (
             <button
               onClick={showLess}

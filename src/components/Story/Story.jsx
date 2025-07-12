@@ -3,6 +3,7 @@ import { TitleSections } from "../Utilities/TitleSections";
 import profile from "../../assets/Images/profile_1.jpg";
 import profile2 from "../../assets/Images/profile2.jpg";
 import PinkFlower from "../../assets/Icons/PinkFlower.svg";
+import {StoryData }from "../Data/Data"
 
 import stars from "../../assets/Icons/stars.svg";
 const About = () => {
@@ -56,49 +57,19 @@ const About = () => {
                   today. I absolutely love my coaches at Olympic Stars, they
                   support me, help me grow, and always cheer me on.
                 </p>
-
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <img
-                      src={stars}
-                      alt="stars"
-                      className="text-secondPink mt-1"
-                    />
-                    <span>
-                      I’m not just a gymnast I’m also super{" "}
-                      <span className="text-yellow-500">funny, goofy</span>, and
-                      I love making people laugh.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <img
-                      src={stars}
-                      alt="stars"
-                      className="text-secondPink mt-1"
-                    />
-                    <span>
-                      I love, love, love giving gifts to the people I care
-                      about. It makes me happy to make others smile.. I’m smart,
-                      confident, and outgoing. I always bring{" "}
-                      <span className="text-purple-500">positive energy</span>{" "}
-                      wherever I go.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <img
-                      src={stars}
-                      alt="stars"
-                      className="text-secondPink mt-1"
-                    />
-                    <span>
-                      And most of all, I just love to have{" "}
-                      <span className="text-secondPink">fun</span>, whether I’m
-                      on the mat or off!
-                    </span>
-                  </li>
-                </ul>
+                {StoryData.map(({ id, description }) => (
+                  <ul key={id} className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <img
+                        src={stars}
+                        alt="stars"
+                        className="text-secondPink mt-1"
+                      />
+                      {description}
+                    </li>
+                  </ul>
+                ))}
               </div>
-
               {/* Image */}
               <div
                 data-aos="fade-up"

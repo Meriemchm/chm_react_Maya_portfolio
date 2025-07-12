@@ -89,6 +89,40 @@ export const achievementsData = [
   },
 ];
 
+export const StoryData = [
+  {
+    id: 1,
+    description: (
+      <span>
+        I’m not just a gymnast I’m also super{" "}
+        <span className="text-yellow-500">funny, goofy</span>, and I love making
+        people laugh.
+      </span>
+    ),
+  },
+  {
+    id: 2,
+    description: (
+      <span>
+        I love, love, love giving gifts to the people I care about. It makes me
+        happy to make others smile.. I’m smart, confident, and outgoing. I
+        always bring <span className="text-purple-500">positive energy</span>{" "}
+        wherever I go.
+      </span>
+    ),
+  },
+  {
+    id: 3,
+    description: (
+      <span>
+        And most of all, I just love to have{" "}
+        <span className="text-secondPink">fun</span>, whether I’m on the mat or
+        off!
+      </span>
+    ),
+  },
+];
+
 // Chargement dynamique des images
 const imageModules = import.meta.glob("../../assets/Photos/*.{jpg,jpeg,png}");
 const imageEntries = Object.entries(imageModules).sort((a, b) =>
@@ -127,7 +161,7 @@ export const loadVideoByIndex = async (index) => {
     const video = await importFn();
 
     // le chemin de la miniature correspondante
-    const baseName = path.split("/").pop().replace(".mp4", ""); 
+    const baseName = path.split("/").pop().replace(".mp4", "");
 
     const thumbnailKey = Object.keys(thumbnailModules).find((key) =>
       key.includes(`${baseName}.jpg`)
@@ -138,7 +172,7 @@ export const loadVideoByIndex = async (index) => {
     return {
       type: "video",
       src: video.default,
-      poster: thumbnail, 
+      poster: thumbnail,
     };
   }
   return null;

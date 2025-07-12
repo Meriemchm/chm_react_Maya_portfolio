@@ -9,7 +9,7 @@ export const Gallery = () => {
           <TitleSections title="Gallery" />
 
         {/* Texte */}
-        <div data-aos="fade-up" className="py-10">
+        <div data-aos="fade-up" className="py-14">
           <p className="text-black max-w-xl text-sm md:text-base">
             One day, I hope to compete at{" "}
             <span className="text-secondPink">the Olympics</span> and represent

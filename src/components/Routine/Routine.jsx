@@ -10,7 +10,7 @@ export const Routine = () => {
           <TitleSections title="My routine" />
         </div>
 
-        <div data-aos="fade-up" className="py-10">
+        <div data-aos="fade-up" className="py-14">
           <p className="text-black max-w-xl text-sm md:text-base">
             I train about 3 hours a day,{" "}
             <span className="text-secondPink">4–5 days</span> a week, and almost
