@@ -2,6 +2,7 @@ import React from "react";
 import { formItem } from "../Data/Data";
 import vector1 from "../../assets/Icons/vector1.svg";
 import { links } from "../Data/Data";
+import PinkFlower from "../../assets/Icons/PinkFlower.svg";
 
 const Contact = () => {
   const client = "https://getform.io/f/awnwdzyb";
@@ -12,10 +13,24 @@ const Contact = () => {
   return (
     <div name="contact" className="p-2 md:p-4 h-[125vh] w-full">
       <div className=" relative py-16 bg-gradient-to-b from-sevenyellow via-primaryPink to-eightBlue rounded-lg h-full">
-        <div data-aos="fade-up">
-          <p className="font-playfair text-3xl md:text-4xl font-bold text-primary text-center md:py-6 ">
-            Contact
-          </p>
+        <div data-aos="fade-up" className="flex justify-center relative">
+          <div className="flex items-center relative">
+            {/* Fleur en haut à droite */}
+            <img
+              src={PinkFlower}
+              alt="Fleur décorative"
+              className="absolute -top-8 md:-top-0 -right-12"
+            />
+            <img
+              src={PinkFlower}
+              alt="Fleur décorative bas gauche"
+              className="absolute -bottom-5 md:bottom-2 -left-8 w-8 h-8"
+            />
+            {/* Texte */}
+            <p className="font-playfair text-3xl md:text-4xl font-bold text-primary text-center md:py-6">
+              Contact
+            </p>
+          </div>
         </div>
 
         <div className="flex flex-col 2xl:flex-row justify-center items-center md:w-full">

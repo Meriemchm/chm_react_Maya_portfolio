@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { Navlink } from "../Data/Data";
 import bars from "../../assets/Icons/bars.svg";
 import times from "../../assets/Icons/times.svg";
+import YellowFlower from "../../assets/Icons/YellowFlower.svg";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -27,7 +28,14 @@ const Navbar = () => {
     <div
       className={`w-full fixed top-0 z-50 flex justify-center px-4 ${bgColor} transition-all duration-300`}
     >
-      <div className=" w-full h-16 mt-4 flex justify-between items-center bg-primaryPink rounded-lg px-6 md:px-10">
+      <div className="relative w-full h-16 mt-4 flex justify-between items-center bg-primaryPink rounded-lg px-6 md:px-10">
+        {/* Fleur SVG en haut à droite */}
+        <img
+          src={YellowFlower}
+          alt="Fleur décorative"
+          className="absolute -top-3 -left-3 h-10 w-10"
+        />
+
         {/* Logo */}
         <h1 className="text-xl md:text-2xl font-semibold text-black">MAYA</h1>
 
@@ -53,7 +61,7 @@ const Navbar = () => {
           {show ? (
             <img src={times} alt="Close Menu" />
           ) : (
-            <img src={bars} alt="Open Menu"/>
+            <img src={bars} alt="Open Menu" />
           )}
         </div>
       </div>
@@ -66,7 +74,7 @@ const Navbar = () => {
             onClick={() => setShow(false)}
             className="absolute top-8 right-8 cursor-pointer"
           >
-            <img src={times} alt="Close Menu"/>
+            <img src={times} alt="Close Menu" />
           </div>
 
           {Navlink.map(({ id, link }) => (

@@ -17,7 +17,7 @@ const Achievements = () => {
             in Qatar with over 200 gymnasts from around the world. In 2025, I
             traveled to Dubai to compete in a{" "}
             <span className="text-secondPink">
-              big event organized by Strix Gymnastics Club
+              big event organized by Strix Gymnastics Club.
             </span>
           </p>
         </div>
