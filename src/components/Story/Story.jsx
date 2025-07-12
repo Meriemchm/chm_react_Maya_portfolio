@@ -31,14 +31,14 @@ const About = () => {
             <img
               src={PinkFlower}
               alt="Fleur décorative"
-              className="absolute -top-6 -right-6"
+              className="absolute -top-6 -right-4 md:-right-6"
             />
 
             {/* Fleur en bas à gauche */}
             <img
               src={PinkFlower}
               alt="Fleur décorative"
-              className="absolute -bottom-6 -left-6 w-10 md:w-12"
+              className="absolute -bottom-6 -left-2 md:-left-6 w-10 md:w-12"
             />
 
             <div className="flex flex-col justify-center items-center md:flex-row bg-white rounded-xl border border-gray-200 overflow-hidden mx-auto p-6 gap-6">
