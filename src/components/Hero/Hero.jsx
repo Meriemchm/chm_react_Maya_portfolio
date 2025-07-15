@@ -7,7 +7,7 @@ import PinkFlower from "../../assets/Icons/PinkFlower.svg";
 
 const Presentation = () => {
   return (
-    <div name="home" className="flex min-h-screen w-full relative px-4 pt-28">
+    <div name="home" className="flex min-h-screen w-full relative px-4 pt-28 pb-12">
       <div className="flex flex-col-reverse md:flex-row min-h-screen mx-auto w-full bg-gradient-to-b from-purpleSix to-primaryPink rounded-lg justify-center items-center">
         <img
           src={Vector}
@@ -18,7 +18,7 @@ const Presentation = () => {
         {/* Bloc texte */}
         <div
           data-aos="fade-left"
-          className="z-10 flex flex-col gap-6 px-4 md:px-10 py-10 md:text-left md:items-start max-w-xl"
+          className="z-10 flex flex-col gap-6 md:px-10 py-10 md:text-left md:items-start max-w-xl"
         >
           {/* Icônes */}
           <div
